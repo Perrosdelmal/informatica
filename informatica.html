@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <a href="https://www.midominio.com">INFORMATICA</a>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATICA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mi Página Web</h1>
+</header>
+
+<nav>
+    <a href="#materia" onclick="mostrarSeccion('materia')">Materia</a>
+    <a href="#integrantes" onclick="mostrarSeccion('integrantes')">Integrantes</a>
+    <a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a>
+</nav>
+
+<section id="materia">
+    <h2>Materia</h2>
+    <p>Esta sección contiene información sobre la materia de nuestro sitio web.</p>
+</section>
+
+<section id="integrantes">
+    <h2>Integrantes</h2>
+    <p>Esta sección presenta a los integrantes de nuestro equipo.</p>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes contactarnos a través de la siguiente información de contacto.</p>
+</section>
+
+<footer>
+    <p>Derechos de autor © 2024 - Mi Página Web</p>
+</footer>
+
+<script>
+    function mostrarSeccion(id) {
+        var secciones = document.querySelectorAll('section');
+        secciones.forEach(function(seccion) {
+            if (seccion.id === id) {
+                seccion.style.display = 'block';
+            } else {
+                seccion.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
